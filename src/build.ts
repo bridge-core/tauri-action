@@ -99,6 +99,9 @@ export async function buildProject(
       join(artifactsPath, `bundle/macos/${app.name}.app`),
       join(artifactsPath, `bundle/macos/${app.name}.app.tar.gz`),
       join(artifactsPath, `bundle/macos/${app.name}.app.tar.gz.sig`),
+      join(artifactsPath, `bundle/appimage/${app.name}.AppImage`),
+      join(artifactsPath, `bundle/appimage/${app.name}.AppImage.tar.gz`),
+      join(artifactsPath, `bundle/appimage/${app.name}.AppImage.tar.gz.sig`),
     ].map((path) => ({ path, arch }));
   } else if (targetInfo.platform === 'windows') {
     if (arch.startsWith('i')) {
